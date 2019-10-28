@@ -1,1 +1,1 @@
-
+print("Code is hard")
