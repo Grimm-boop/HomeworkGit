@@ -23,3 +23,4 @@ def play():
     print(isSame)
 
 play()
+print("i fucked up my projectf")
