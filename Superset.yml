@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: Superset
+spec:
+  selector:
+    name: Superset
+  type: NodePort
+  ports:8088
+  - name: foo # Actually, no port is needed.
+    port: 80
+    targetPort: 80
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: Superset
+  labels:
+    name: Superset
+spec:
+  containers:
+  - image: Superset
+    name: Superset-container
+    command:
+      - sleep
+      - "3600"
